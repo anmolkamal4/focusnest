@@ -1,0 +1,21 @@
+# Force CSS MIME type
+AddType text/css .css
+
+# Enable mod_rewrite
+RewriteEngine On
+
+# Force CSS to load properly
+<FilesMatch "\.(css)$">
+    Header set Content-Type "text/css"
+</FilesMatch>
+
+# Cache CSS files
+<IfModule mod_expires.c>
+    ExpiresActive on
+    ExpiresByType text/css "access plus 1 year"
+</IfModule>
+
+# Compression for CSS
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/css
+</IfModule>

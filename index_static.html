@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Productivity Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Same HTML content as original -->
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Student Productivity Hub</span>
+            </div>
+            <div class="nav-controls">
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+                <div class="auth-buttons">
+                    <button class="btn-login" onclick="openLogin()">Login</button>
+                    <button class="btn-signup" onclick="openSignup()">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Dashboard -->
+    <div class="container">
+        <div class="hero-section">
+            <h1>Welcome to Your Productivity Hub</h1>
+            <p>Boost your academic performance with our comprehensive suite of tools</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card" onclick="openDayPlanner()">
+                <div class="card-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <h3>Day Planner</h3>
+                <p>Organize your daily schedule and track your tasks efficiently</p>
+                <button class="card-btn">Open Planner</button>
+            </div>
+
+            <div class="feature-card" onclick="openWaterReminder()">
+                <div class="card-icon">
+                    <i class="fas fa-tint"></i>
+                </div>
+                <h3>Water Reminder</h3>
+                <p>Stay hydrated with smart notifications and ringtone alerts</p>
+                <button class="card-btn">Set Reminder</button>
+            </div>
+
+            <div class="feature-card" onclick="openStudyLibrary()">
+                <div class="card-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <h3>Study Library</h3>
+                <p>Access free programming books and educational resources</p>
+                <button class="card-btn">Browse Library</button>
+            </div>
+
+            <div class="feature-card" onclick="openFocusMode()">
+                <div class="card-icon">
+                    <i class="fas fa-headphones"></i>
+                </div>
+                <h3>Focus Mode</h3>
+                <p>Concentrate with ambient sounds and productivity music</p>
+                <button class="card-btn">Start Focus</button>
+            </div>
+
+            <div class="feature-card" onclick="openGamingZone()">
+                <div class="card-icon">
+                    <i class="fas fa-gamepad"></i>
+                </div>
+                <h3>Gaming Zone</h3>
+                <p>Relax with fun games including typing, chess, and word puzzles</p>
+                <button class="card-btn">Play Games</button>
+            </div>
+
+            <div class="feature-card" onclick="openAITools()">
+                <div class="card-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h3>AI Tools</h3>
+                <p>Access powerful AI tools for learning and productivity</p>
+                <button class="card-btn">Explore AI</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLogin()">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email:</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="btn-primary">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSignup()">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signupName">Full Name:</label>
+                    <input type="text" id="signupName" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email:</label>
+                    <input type="email" id="signupEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password:</label>
+                    <input type="password" id="signupPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" required>
+                </div>
+                <button type="submit" class="btn-primary">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
